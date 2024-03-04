@@ -15,7 +15,7 @@ docker-compose up -d
 
 4. agregar la siguiente linea al archivo creado *config/odoo.conf* (luego reiniciar contenedor)
 
-`addons_path=/usr/lib/python3/dist-packages/odoo/addons,/mnt/extra-addons,/var/lib/odoo/.local/share/Odoo/addons/16.0`
+`addons_path=/usr/lib/python3/dist-packages/odoo/addons,/mnt/extra-addons,/var/lib/odoo/.local/share/Odoo/addons/17.0`
 
 ### B) COMANDOS ÚTILES DE DOCKER
 - listar contenedores:
@@ -39,8 +39,7 @@ version: '3.3'
 services:
 
   odoo:
-    image: odoo:16.0
-    platform: linux/amd64
+    image: odoo:17.0
     container_name: odoo
     restart: unless-stopped
     links:
@@ -55,8 +54,7 @@ services:
       - ./addons:/mnt/extra-addons
 
   db:
-    image: postgres:14.0
-    platform: linux/arm64/v8
+    image: postgres:16.0
     container_name: db
     restart: unless-stopped       
     environment:
