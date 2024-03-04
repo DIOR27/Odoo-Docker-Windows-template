@@ -1,0 +1,8 @@
+{
+    "stubPath": "D:/Users/DIEGO/Desarrollo/Python/odoo-stubs17",
+    "extraPaths": [
+        "D:/Users/DIEGO/Desarrollo/Python/odoo17",
+        "D:/Users/DIEGO/Desarrollo/Python/odoo17/addons",
+        "D:/Users/DIEGO/Desarrollo/Python/docker-odoo-dev/extra-addons"
+    ]
+}
