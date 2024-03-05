@@ -9,7 +9,7 @@
 docker-compose up -d
 
 3. validar inicio de Odoo y crear base de datos local 
-**master-password: xxxxxxxxxxxx** (depende de tu instalación docker)
+**master-password: 8gkx-apcj-jvmu** (depende de tu instalación docker)
 
 [Localhost](http://127.0.0.1:8200/)
 
@@ -28,6 +28,8 @@ docker exec -u root -t -i odoo /bin/bash
 odoo scaffold [nombre_modulo] /mnt/extra-addons
 - acceder a psql (postgres) estando dentro del docker db como root
 psql -U odoo -d [nombre_bd_odoo]
+- ver IP de contenedor
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' [nombre_contenedor]
 
 ---
 
@@ -43,7 +45,7 @@ services:
     container_name: odoo
     restart: unless-stopped
     links:
-      - db:db    
+      - db:db
     depends_on:
       - db
     ports:
@@ -52,6 +54,7 @@ services:
       - odoo-data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
+    entrypoint: "/usr/bin/odoo -c /etc/odoo/odoo.conf --dev all -d odoo17 -u test"
 
   db:
     image: postgres:16.0
