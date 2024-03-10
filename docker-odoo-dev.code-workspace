@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../odoo17"
+		}
+	],
+	"settings": {
+		"python.languageServer": "None"
+	}
+}
