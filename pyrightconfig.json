@@ -1,8 +1,8 @@
 {
-    "stubPath": "D:/Users/DIEGO/Desarrollo/Odoo/odoo-stubs17",
+    "stubPath": "D:/Users/DIEGO/Desarrollo/Python/Odoo/odoo-stubs17",
     "extraPaths": [
-        "D:/Users/DIEGO/Desarrollo/Odoo/odoo17",
-        "D:/Users/DIEGO/Desarrollo/Odoo/odoo17/addons",
-        "D:/Users/DIEGO/Desarrollo/Odoo/docker-odoo-dev/extra-addons"
+        "D:/Users/DIEGO/Desarrollo/Python/Odoo/odoo17",
+        "D:/Users/DIEGO/Desarrollo/Python/Odoo/odoo17/addons",
+        "D:/Users/DIEGO/Desarrollo/Python/Odoo/docker-odoo-dev/extra-addons"
     ]
 }
