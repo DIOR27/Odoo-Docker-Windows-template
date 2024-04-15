@@ -13,5 +13,3 @@ __pycache__/
 pyrightconfig.json
 .env
 
-docker-compose.yml
-config/odoo.conf
